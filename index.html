@@ -3,23 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thread.tech - Em Breve</title>
+    <title>Thread.tech - Soluções em Software</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer></script>
 </head>
-<body>
-    <header class="main-header">
-        <div class="logo">threadtec</div>
+<body class="font-outfit bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark-gray/95 backdrop-blur-sm border-b border-primary/20 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-primary text-2xl font-bold">thread.tech</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-light hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-light hover:text-primary transition-colors">Quem Somos</a>
+                    <a href="#services" class="text-light hover:text-primary transition-colors">Serviços</a>
+                    <a href="#contact" class="text-light hover:text-primary transition-colors">Contato</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-light">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-light hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-light hover:text-primary transition-colors">Quem Somos</a>
+                    <a href="#services" class="text-light hover:text-primary transition-colors">Serviços</a>
+                    <a href="#contact" class="text-light hover:text-primary transition-colors">Contato</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <div class="content">
-            <h1>threadtec</h1>
-            <div class="divider"></div>
-            <h2>Em Breve</h2>
-            <p>Grandes novidades estão chegando.</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072')] bg-cover bg-fixed">
+        <div class="absolute inset-0 bg-dark/80 backdrop-blur-sm"></div>
+        <div class="section-container text-center relative z-10">
+            <h1 class="text-6xl md:text-7xl font-bold text-primary mb-6 animate-float">thread.tech</h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">Transformando ideias em soluções digitais com excelência e inovação</p>
+            <a href="#contact" class="btn-primary inline-flex items-center group">
+                Entre em Contato
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-dark-gray">
+        <div class="section-container">
+            <h2 class="section-title text-center">Quem Somos</h2>
+            <div class="max-w-3xl mx-auto text-center mb-16 fade-in">
+                <p class="text-lg mb-8">
+                    A Thread.tech nasceu da união de três profissionais apaixonados por tecnologia e inovação. 
+                    Nossa missão é desenvolver soluções de software sob medida que impulsionam o sucesso dos nossos clientes.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-card fade-in">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="" alt="Daniel" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Daniel</h3>
+                    <p class="text-light/90">Especialista em arquitetura de software e líder técnico com vasta experiência em desenvolvimento de soluções escaláveis.</p>
+                </div>
+                <div class="team-card fade-in" style="transition-delay: 200ms;">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400" alt="Patrick" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Patrick</h3>
+                    <p class="text-light/90">Desenvolvedor full-stack com expertise em tecnologias modernas e foco em experiência do usuário.</p>
+                </div>
+                <div class="team-card fade-in" style="transition-delay: 400ms;">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400" alt="Felipe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Felipe</h3>
+                    <p class="text-light/90">Especialista em gestão de projetos e desenvolvimento ágil, garantindo entregas de alta qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-container">
+            <h2 class="section-title text-center">Nossos Serviços</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card fade-in">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="Desenvolvimento" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Desenvolvimento Sob Demanda</h3>
+                    <p>Criamos soluções personalizadas que atendem às necessidades específicas do seu negócio.</p>
+                </div>
+                <div class="service-card fade-in" style="transition-delay: 200ms;">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500" alt="Consultoria" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Consultoria Técnica</h3>
+                    <p>Oferecemos orientação especializada para otimizar seus processos tecnológicos.</p>
+                </div>
+                <div class="service-card fade-in" style="transition-delay: 400ms;">
+                    <div class="mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500" alt="Manutenção" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Manutenção e Suporte</h3>
+                    <p>Garantimos o funcionamento contínuo e eficiente das suas aplicações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark-gray">
+        <div class="section-container">
+            <h2 class="section-title text-center">Entre em Contato</h2>
+            <div class="max-w-2xl mx-auto fade-in">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+                            <input type="text" id="name" name="name" required class="input-field" placeholder="Seu nome">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="input-field" placeholder="seu@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium mb-2">Telefone</label>
+                        <input type="tel" id="phone" name="phone" class="input-field" placeholder="(00) 00000-0000">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" required class="input-field" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-primary w-full group">
+                            Enviar Mensagem
+                            <svg class="w-5 h-5 ml-2 inline-block transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-primary/20">
+        <div class="section-container py-8">
+            <div class="text-center">
+                <p class="text-light/70">&copy; 2024 Thread.tech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
